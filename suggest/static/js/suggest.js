@@ -24,16 +24,22 @@ $("#search-text").keyup(event => {
         $("#search-btn").click();
         return;
     }
-    
+
     $("#suggestion-card").css("visibility", "visible");
     $("#suggestions").html("");
-    
+
     query = $("#search-text").val().trim();
     $.getJSON(`/suggest?t=${query}`, result => {
         result.forEach(e => {
             renderSuggestion(e);
         })
     });
+});
+
+$(document).click(() => {
+    if (this != $("#suggestion-card")[0]) {
+        $("#suggestion-card").css("visibility", "hidden");
+    }
 });
 
 $(document.body).on("click", ".suggestion", event => {
