@@ -8,27 +8,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/suggest.css') }}">
 
-    <script src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/suggest.js') }}" defer></script>
 
-    <title>Hello, world!</title>
+    <title>Suggest</title>
 </head>
 
 <body>
-
     <div class="container">
+        <div class="row">
+            <div class="col-md-3" id="sidebar">
+                <div class="card">
+                    <div class="card-body" id="categories"></div>
+                </div>
+            </div>
+            <div class="col-md-9" id="page">
+                <div class="input-group mb-3">
+                    <input class="form-control form-control-lg" type="text" id="search-text"
+                        placeholder="Wonach suchen Sie?" aria-describedby="search-btn">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="search-btn">Suchen</button>
+                    </div>
+                </div>
 
-        <div class="input-group mb-3">
-            <input class="form-control form-control-lg" type="text" id="search-text" placeholder="Wonach suchen Sie?"
-                aria-describedby="search-btn">
-            <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" id="search-btn">Suchen</button>
+                <div class="row" id="results">
+                    <div class="col-md"></div>
+                </div>
             </div>
         </div>
-
-        <div id="results">
-        </div>
-
     </div>
 </body>
 

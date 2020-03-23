@@ -1,3 +1,14 @@
 .container {
+    max-width: 1600px;
     margin-top: 3rem;
+}
+
+.row {
+    margin-top: 1rem;
+}
+
+.product {
+    width: 16rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
