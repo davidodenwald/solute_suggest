@@ -28,12 +28,24 @@
                     <input class="form-control form-control-lg" type="text" id="search-text"
                         placeholder="Wonach suchen Sie?" aria-describedby="search-btn">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" id="search-btn">Suchen</button>
+                        <button class="btn btn-outline-dark" type="button" id="search-btn">Suchen</button>
                     </div>
+                    <div class="card" id="suggestion-card">
+                        <div class="card-body" id="suggestions">
+                          
+                        </div>
+                      </div>
+                </div>
+
+                <div class="form-group" id="sorter">
+                    <select class="form-control" id="sort-select">
+                        <option>Preis (billigster oben)</option>
+                        <option>Preis (teuerster oben)</option>
+                    </select>
                 </div>
 
                 <div class="row" id="results">
-                    <div class="col-md"></div>
+
                 </div>
             </div>
         </div>

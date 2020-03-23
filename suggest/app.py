@@ -9,6 +9,12 @@ def index():
     return flask.render_template("index.html")
 
 
+@app.route("/suggest")
+def suggest():
+    text = flask.request.args.get("t")
+    return flask.jsonify(products.search(text, max=10))
+
+
 @app.route("/search")
 def search():
     query = flask.request.args.get("q")

@@ -5,10 +5,27 @@
 
 .row {
     margin-top: 1rem;
+    margin-left: 0px !important;
+}
+
+#suggestion-card {
+    position: absolute;
+    visibility: hidden;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.suggestion:hover {
+    background-color: lightgray;
 }
 
 .product {
-    width: 16rem;
+    width: 17rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
+}
+
+#sorter {
+    width: 15rem;
 }

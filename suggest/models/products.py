@@ -3,7 +3,7 @@ import json
 PRODUCTS_FILE = "models/top-1000-products.json"
 
 
-def search(query):
+def search(query, max=None):
     with open(PRODUCTS_FILE) as fp:
         all_products = json.load(fp)
 
@@ -12,6 +12,8 @@ def search(query):
         if _match(query, product["name"]):
             products.append(product)
     
+    if max != None:
+        return products[:max]
     return products
 
 def _match(query, text):
