@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/suggest.css') }}">
+
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" defer></script>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="input-group mb-3">
+            <input class="form-control form-control-lg" type="text" id="search-text" placeholder="Wonach suchen Sie?"
+                aria-describedby="search-btn">
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" id="search-btn">Suchen</button>
+            </div>
+        </div>
+
+        <div id="results">
+        </div>
+
+    </div>
+</body>
+
+</html>
